@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap')
+@import vars
+
+html
+  font-size: 16px
+
+html,
+body
+  padding: 0
+  margin: 0
+  font-family: -apple-system, Roboto, sans-serif
+
+body
+  padding-top: 56px
+  background-color: $color_page_bg
+
+a
+  color: inherit
+  text-decoration: none
+
+button
+  background: none
+  border: none
+  font-family: inherit
+  font-size: $font_normal
+  cursor: pointer
+
+*
+  box-sizing: border-box
+  &::selection
+    color: $color_text_white
+    background-color: $color_selection_bg
+
+.MuiBackdrop-root
+  touch-action: none
+
+.MuiToolbar-regular
+  background-color: $color_main_bg
+
+.MuiBox-root
+  background-color: $color_main_bg
+
+.MuiAppBar-colorPrimary
+  background-color: $color_main_bg
+
+  [data-testid="MenuIcon"]
+    fill: $color_icon_black
+
+.MuiIconButton-root
+  padding: 0 !important
+
+.MuiTypography-root
+  .markdown-body
+    &>:last-child
+      margin-bottom: 0!important
+    &>:first-child
+      margin-top: 0!important
+
+.MuiTypography-paragraph
+  margin-bottom: 0 !important
+
+.MuiTypography-subtitle2
+  font-size: $font_normal
+
+.MuiButton-root
+  text-transform: none !important
+
+.MuiTabs-scroller
+  max-width: 765px
+  margin: 0 auto
+
+.MuiInputBase-input
+  padding: $space_tiny $space_normal !important
+
+.MuiCardContent-root:last-child
+  padding-bottom: 0.875rem
+
+.MuiButton-text
+  color: $color_text_secondary !important
+
+.MuiCardActions-root > :not(:first-of-type)
+  margin-left: 0 !important
+
+.MuiToolbar-root
+  min-height: 56px
+
+  @media screen and (min-width: 600px)
+    min-height: 56px !important
+
+.Mui-selected
+  color: $color_text_primary !important
+
+.MuiTabs-indicator
+  background-color: $color_line_outline_primary !important
+
+.MuiListItemIcon-root
+  min-width: 36px
+
+.MuiInputLabel-root.MuiInputLabel-formControl.Mui-focused
+  color: $color_text_dark_gray !important
+
+.MuiCircularProgress-root
+  display: inline-block
+  width: 100%
+  overflow: hidden
+
+  svg
+    margin: 0 auto
+
+.infinite-scroll-component
+  overflow: visible !important
+
+.MarkdownEditor
+  .CodeMirror
+    font-size: 1rem
+    padding: 6.5px 11px
+
+  .CodeMirror-scroll
+    min-height: 4.25rem !important
+
+  .CodeMirror.cm-s-easymde.CodeMirror-wrap.CodeMirror-fullscreen
+    z-index: 10000
+
+  .editor-preview-side
+    z-index: 10000
+
+  .markdown-body
+    background-color: $color_main_bg !important
+    padding: $space_normal !important
+    a
+      color: $color_text_primary !important
+
+  .editor-toolbar
+    border-color: $color_input_outline
+    color: $color_text_dark_gray
+
+    &.fullscreen
+      z-index: 10000
+
+  &.hideToolbar
+    .editor-toolbar
+      display: none
+
+    .CodeMirror
+      border-radius: 5px
+
+  &:hover .editor-toolbar
+    color: $color_text_secondary
+
+  .editor-statusbar
+    display: none
+
+.MuiTooltip-tooltip
+  margin-bottom: $space_mini !important
+  padding: $space_mini $space_small
+  font-size: 14px
+  letter-spacing: 0.1px

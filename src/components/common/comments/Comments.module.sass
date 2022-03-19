@@ -1,0 +1,113 @@
+@import src/styles/vars
+
+.title
+  margin-bottom: $space_normal
+
+.comment
+  padding: .625rem $space_normal
+  text-align: left
+  background-color: $color_comment_bg
+  border-radius: .25rem
+
+.details
+  display: flex
+  justify-content: space-between
+
+.leftPart
+  display: flex
+  align-items: center
+
+
+.textarea
+  & :global(.MuiOutlinedInput-root)
+    height: 36px
+  & :global(.MuiInputBase-root.MuiOutlinedInput-root)
+    padding: 0
+    textarea
+      height: 22px !important
+
+.options
+  margin-left: $space_tiny
+  margin-right: -$space_tiny
+  color: $color_icon_black
+
+
+.group
+  display: flex
+  gap: .375rem
+  margin-top: 2px
+
+  @include mobile
+    justify-content: space-between
+
+  & :global(.MuiTypography-root)
+    font-size: $font_small
+
+.button
+  margin-top: $space_normal !important
+
+  &:global(.MuiButton-root)
+    &:hover
+      background-color: $color_button_primary_bg
+      color: $color_text_white !important
+
+.buttonWithoutText
+  &:global(.MuiButton-root)
+    background-color: $color_button_primary_bg !important
+    border-color: $color_button_outline_primary !important
+    color: $color_text_white !important
+    opacity: .5
+
+.buttonCancel
+  margin-top: $space_normal !important
+  margin-left: $space_normal
+  color: $color_text_secondary !important
+  border-color: $color_button_outline !important
+
+.new
+  margin-top: $space_normal
+
+.time
+  color: $color_text_dark_gray
+
+.replies
+  display: flex
+  align-items: center
+  margin-bottom: 1.0625rem
+  color: $color_text_primary
+  &:global(.MuiTypography-root)
+    font-weight: 500
+
+  svg
+    padding-top: 2px
+
+.commentBox
+  display: flex
+  gap: .5rem
+  background: none
+  width: 100%
+  margin-top: .375rem
+
+.commentContent
+  width: 100%
+
+.commentsBox
+  margin-top: $space_normal
+
+.newCommentBox
+  display: flex
+  gap: .5rem
+  align-items: flex-start
+  background: transparent
+  margin-bottom: $space_tiny
+
+.editor
+  &:global(.MarkdownEditor .CodeMirror-scroll)
+    min-height: .5rem !important
+  & :global(.CodeMirror-wrap)
+    padding: $space_mini $space_normal
+    border-color: $color_button_outline_primary
+
+.editorActive
+  & :global(.CodeMirror-wrap)
+    padding: $space_small $space_normal

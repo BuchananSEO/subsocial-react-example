@@ -1,0 +1,15 @@
+@import src/styles/vars
+
+.button
+  white-space: nowrap
+  &:global(.MuiButton-outlinedPrimary)
+    min-height: 24px
+    height: max-content
+    padding: $space_mini 0.625rem
+    font-size: $font_small
+    font-weight: 500
+    color: $color_text_secondary
+    border-color: $color_button_outline
+
+    &:disabled
+      padding: $space_mini $space_tiny

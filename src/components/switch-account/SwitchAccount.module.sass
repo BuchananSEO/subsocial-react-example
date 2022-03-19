@@ -1,0 +1,190 @@
+@import src/styles/vars
+
+
+
+.close
+  position: absolute !important
+  right: 0
+  top: 0
+  margin: $space_normal !important
+  padding: 0
+  z-index: 2
+
+.drawer
+  display: flex
+  flex-direction: column
+  z-index: 1202
+
+  & :global(.MuiPaper-root.MuiDrawer-paper)
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+
+  & :global(.MuiDrawer-paper)
+    max-width: 425px
+    width: 100%
+    overflow: hidden
+
+  @media screen and (min-width: 767px)
+    & :global(.MuiBackdrop-root)
+      background: none
+
+  @media screen and (max-width: 767px)
+    & :global(.MuiBox-root)
+      display: flex
+      flex-direction: column
+      max-width: 90%
+      width: 100%
+      height: 80%
+      margin: auto
+      border-radius: 5px
+      overflow: hidden
+
+
+
+.title
+  margin-bottom: $space_mini
+
+.account
+  row-gap: 0.5rem
+  padding: $space_normal $space_normal 0
+
+.header
+  display: flex
+  gap: 1rem
+  align-items: center
+  padding-bottom: $space_large
+
+.followers
+  button
+    font-size: $font_small
+
+.item
+  &:global(.MuiListItem-root)
+    padding: $space_mini $space_big $space_mini $space_normal
+    gap: 1rem
+    cursor: pointer
+    color: $color_text_dark_gray
+
+    .info
+      width: 100%
+      margin: 0.375rem 0
+      color: $color_text_secondary
+      white-space: nowrap
+      overflow: hidden
+
+      .address
+        & :global(.MuiTypography-root)
+          margin-left: 0
+
+      & :global(.MuiTypography-root)
+        text-overflow: ellipsis
+        overflow: hidden
+
+  .address
+    margin: 0 !important
+    color: $color_text_dark_gray
+    & :global(.MuiTypography-root)
+      margin-left: 0 !important
+
+  &:hover
+    background-color: $color_menu-item_bg_hover
+    color: $color_text_primary
+
+    .icon,
+    .iconLanguage
+      fill: $color_icon_primary
+      svg
+        fill: $color_icon_primary
+
+  .balance
+    font-size: $font_small
+    margin: 0 !important
+
+  & :global(.MuiListItemAvatar-root)
+    min-width: auto
+
+  & :global(.MuiListItemIcon-root)
+    min-width: 40px
+
+
+.accounts
+  margin-right: -$space_normal
+  overflow-y: scroll
+  padding-top: 0
+  @media screen and (min-width: 767px)
+    @include scroll
+
+.icon
+  padding-left: $space_tiny
+  svg
+    fill: $color_icon_dark_gray
+
+.signout
+  display: flex
+  flex-direction: column
+  gap: 1.5rem
+  position: relative
+  width: 100%
+  padding: 0 $space_normal $space_big $space_normal
+  margin-top: auto
+  box-shadow: 0 30px 22px 56px rgba(255, 255, 255, 1)
+  background: $color_button_basic_bg
+
+.buttonModal
+  color: $color_text_secondary
+
+.follow
+  display: flex
+  column-gap: 0.6rem
+
+  button
+    padding: 0
+
+  p
+    margin: 0
+
+.bold
+  font-weight: 500
+
+.address
+  & :global(.MuiTypography-root)
+    margin-left: $space_small !important
+
+.balance,
+.address
+  margin: 0 0 $space_tiny $space_tiny !important
+
+
+.firstDivider
+  margin-bottom: $space_tiny
+
+.lastDivider
+  margin-top: $space_tiny
+
+.profileContainer
+  padding-bottom: 0
+
+.popper
+  z-index: 100000
+
+.language
+  & :global(.MuiTypography-root)
+    display: flex
+    justify-content: space-between
+
+.cardLanguage
+  padding: $space_normal 0
+  min-width: 165px
+  transform: translateX(-$space_normal)
+
+.itemLanguage
+  padding: 0 $space_normal
+  color: $color_text_dark_gray
+
+.iconLanguage
+  padding-right: $space_normal
+
+.selectedLanguage
+  color: $color_text_primary
+
+.unselectedLanguage
+  padding-left: 2.5rem

@@ -1,0 +1,129 @@
+@import src/styles/common
+
+$size_button: 80px
+$position_settings: .625rem
+
+.file
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  p
+    margin: 0
+
+  &.avatar
+    .hint
+      margin-top: $space_normal
+
+    .button
+      width: $size_button
+      height: $size_button
+      border-radius: 50%
+
+    .example
+      object-fit: cover
+      width: 100%
+      height: 100%
+
+  &.image
+    padding: 0
+
+    .button
+      width: 100%
+      min-height: 98px
+      border-radius: 3.5px
+      border-style: solid
+
+      &:hover
+        border-color: $color_button_outline
+        filter: none
+
+    .wrapper
+      width: 100%
+
+    .example
+      width: 100%
+      height: auto
+      object-fit: contain
+
+.hint
+  color: $color_text_dark_gray
+  font-size: $font_small
+
+  @media screen and (max-width: 767px)
+    font-size: .75rem
+
+.input
+  display: none !important
+
+.button
+  &:global(.MuiButton-root)
+    position: relative
+    display: flex
+    flex-direction: column
+    font-weight: 400
+    border: 1px $color_button_outline dashed
+    padding: 0
+    overflow: hidden
+
+    &:hover
+      border-color: $color_button_outline_primary
+      background-color: $color_icon_bg_hover
+
+    &:hover .hover
+      opacity: 1
+
+    ~ div
+      position: absolute !important
+
+.border
+  border: none
+
+.hover
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
+  transition: opacity 300ms
+  fill: $color_icon_white !important
+  opacity: 0
+  z-index: 1
+
+.delete
+  &:global(.MuiButton-root)
+    padding: 0
+    position: absolute
+    right: -70%
+    top: 50%
+    z-index: 1
+    transform: translate(0, -50%)
+
+.wrapper
+  position: relative
+
+.settings
+  position: absolute
+  top: $position_settings
+  right: $position_settings
+  display: flex
+  align-items: center
+  padding: 0 $space_tiny
+  animation-name: appear
+  animation-duration: 300ms
+  background-color: rgba(0, 0, 0, 0.3)
+  border-radius: 35px
+  z-index: 1
+
+  .buttonIcon
+    min-width: min-content
+    border-radius: 50%
+
+    svg
+      fill: $color_icon_white
+
+@keyframes appear
+  0%
+    opacity: 0
+  100%
+    opacity: 1

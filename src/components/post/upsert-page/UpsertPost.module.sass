@@ -1,0 +1,46 @@
+@import src/styles/common
+
+$letter_spacing: 0.15px
+
+.wrapper
+  max-width: 628px
+
+.title
+  padding-bottom: 0
+
+.tabs
+  border-bottom: 1px solid $color_button_outline
+
+.select
+  padding-top: $space_normal
+
+.file
+  margin-top: $space_normal !important
+
+.form
+  display: flex
+  flex-direction: column
+  gap: $space_normal
+  padding-top: $space_big
+
+  & :global(.mat-form-field-wrapper)
+    margin: 0
+
+.buttonCancel
+  letter-spacing: $letter_spacing
+  width: auto
+  min-width: 132px
+
+.buttonEdit
+  letter-spacing: $letter_spacing
+  width: auto
+  min-width: 144px
+
+.buttons
+  gap: $space_normal
+  padding: 0
+  justify-content: flex-end
+  margin-top: -$space_mini
+
+.post
+  border: 1px solid $color_button_outline

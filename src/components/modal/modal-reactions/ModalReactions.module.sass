@@ -1,0 +1,32 @@
+@import src/styles/common
+
+.header
+  position: relative
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2)
+  z-index: 1
+
+.title
+  display: inline-block
+  margin: $space_tiny $space_normal
+
+.scroll
+  overflow-y: auto
+  height: 60vh
+  @include scroll
+  .noData
+    display: flex
+    justify-content: center
+    padding-top: 1em
+
+.label
+  color: $color_text_dark_gray
+  font-weight: 400
+
+.follow
+  :global(.MuiListItem-root)
+    &:first-child
+      padding-top: 0 !important
+
+.tab
+  width: 100%
+

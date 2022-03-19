@@ -1,0 +1,179 @@
+@import 'src/styles/_vars.sass'
+
+.drawer
+  & :global(.MuiPaper-root)
+    display: flex
+    justify-content: space-between
+    width: $sidebar_min_width_on_desktop
+    transition: width 300ms ease-in-out, transform 300ms ease-in-out !important
+    height: calc(100vh - #{$header_height_on_desktop} - 1px)
+    margin-top: calc(#{$header_height_on_desktop} + 1px)
+    border: none
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1)
+    overflow-x: hidden
+
+    &:hover
+      width: $sidebar_max_width_on_desktop
+
+.drawerOpenMobile
+  & :global(.MuiContainer-root)
+    color: gray
+
+  & :global(.MuiPaper-root)
+    width: $sidebar_width_on_mobile
+    animation: appear 200ms
+
+    &:hover
+      width: $sidebar_width_on_mobile
+
+@keyframes appear
+  0%
+    max-width: 0
+  100%
+    max-width: $sidebar_width_on_mobile
+
+.topBox
+  width: $sidebar_max_width_on_desktop
+
+  @include tablet
+    width: $sidebar_width_on_mobile
+    animation: appear 300ms
+
+
+.list
+  display: flex
+  flex-direction: column
+  gap: 0.125rem
+  padding: 0.375rem 0
+
+.item
+  padding: 0.875rem 0
+  height: 46px
+  white-space: nowrap
+  color: $color_text_dark_gray
+  transition: all 0.3s linear
+
+  &:hover
+    color: $color_text_primary
+    background-color: $color_menu-item_bg_hover
+
+    svg
+      fill: $color_icon_primary
+
+.icon
+  display: flex
+  justify-content: center
+  align-items: center
+  width: $sidebar_min_width_on_desktop
+  padding: 0 $space_small
+
+  @include tablet
+    width: 3.5rem
+
+.divider
+  width: $sidebar_min_width_on_desktop
+  margin-left: 0.9375rem
+
+  & :global(.MuiDivider-root)
+    width: 1.5rem
+    border-color: $color_line_outline
+    transition: width 0.2s linear
+
+  @include tablet
+    margin: 0 $space_large
+    width: $sidebar_width_on_mobile !important
+
+    & :global(.MuiDivider-root)
+      width: 14.375rem !important
+
+.drawer
+  &:hover
+    .divider
+      width: $sidebar_max_width_on_desktop
+      margin-left: $space_normal
+
+      & :global(.MuiDivider-root)
+        width: 11.75rem
+
+.bottomBox
+  width: $sidebar_min_width_on_desktop
+  display: flex
+  flex-direction: column
+  gap: $space_normal
+  padding-bottom: $space_big
+
+  @include tablet
+    width: $sidebar_width_on_mobile !important
+    padding-bottom: 2.75rem
+
+.drawer
+  &:hover
+    .bottomBox
+      width: $sidebar_max_width_on_desktop
+
+.socialText
+  display: none
+  text-align: center
+  color: $color_text_dark_gray
+  white-space: nowrap
+  transition: all 300ms ease-in-out !important
+
+  @include tablet
+    display: block
+
+.drawer
+  &:hover
+    .socialText
+      display: block
+
+.socialList
+  display: flex
+  gap: 0.9375rem
+  justify-content: flex-start
+  padding-left: $space_small
+  transition: all 300ms ease-in-out !important
+
+  @include tablet
+    padding-left: 3.3rem
+
+.socialIcon
+  min-width: 30px
+  min-height: 30px
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $color_icon_bg
+  border-radius: 50%
+  transition: background-color 0.5s linear
+
+  &:nth-child(n + 2)
+    display: none
+
+  &:hover
+    background-color: $color_icon_bg_hover
+    border: 1px solid $color_button_outline
+
+  @include tablet
+    display: flex !important
+
+.drawer
+  &:hover
+    .socialIcon:nth-child(n + 2)
+        display: flex
+
+    .socialList
+      padding-left: $space_big
+
+      @include tablet
+        padding-left: 3.3rem
+
+.wrapper
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+
+@keyframes appear
+  0%
+    max-width: 0
+  100%
+    max-width: $sidebar_width_on_mobile

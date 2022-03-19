@@ -1,0 +1,19 @@
+@import src/styles/vars
+
+.warning
+  border-bottom: 1px solid $color_line_outline_warning
+
+  & :global(.MuiAlert-action)
+    padding: 0
+    margin-right: 0
+    align-items: center
+
+.button
+  &:global(.MuiButton-outlinedPrimary)
+    width: 100px
+    height: 24px
+    padding: 0
+    font-size: $font_small
+    font-weight: 500
+    color: $color_text_secondary
+    border-color: $color_button_outline

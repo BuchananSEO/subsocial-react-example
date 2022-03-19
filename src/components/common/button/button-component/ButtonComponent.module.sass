@@ -1,0 +1,36 @@
+@import src/styles/vars
+
+.button
+  display: inline-flex
+  column-gap: 0.785rem
+  min-width: 99px
+  height: 36px
+  padding-left: $space_tiny
+  padding-right: $space_tiny
+  font-size: $font_normal
+  font-weight: 500
+  box-shadow: none
+
+  @media (max-width: 480px)
+    width: 90px
+
+  &:global(.MuiButton-containedPrimary)
+    background-color: $color_button_primary_bg
+    box-shadow: none
+
+    &:hover
+      background-color: $color_button_primary_bg
+
+  &:global(.MuiButton-outlinedPrimary)
+    border-color: $color_button_outline_primary
+    color: $color_text_primary
+
+    &:hover
+      border-color: $color_button_outline_primary
+
+  &:global(.MuiButton-root)[disabled]
+    background-color: $color_button_inactive_bg
+    color: $color_text_disabled_color
+
+    svg
+      color: $color_icon_dark_gray

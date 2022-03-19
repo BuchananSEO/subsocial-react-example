@@ -1,0 +1,16 @@
+@import src/styles/vars
+
+.tabs
+  width: 100%
+  & :global(.MuiButtonBase-root.MuiTab-root)
+    font-size: $font_normal
+
+.Tab
+  width: 100%
+
+.unselected
+  & :global(.Mui-selected)
+    color: $color_text_dark_gray !important
+
+  & :global(.MuiTabs-indicator)
+    display: none

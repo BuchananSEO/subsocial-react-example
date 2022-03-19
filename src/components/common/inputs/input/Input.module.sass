@@ -1,0 +1,18 @@
+@import src/styles/common
+
+.input
+  & :global(.MuiOutlinedInput-root)
+    min-height: 54px !important
+    padding: 0
+
+    &:global(.Mui-focused .MuiOutlinedInput-notchedOutline)
+      border: 2px solid $color_button_outline !important
+
+  & :global(.MuiOutlinedInput-notchedOutline)
+    border-color: $color_button_outline !important
+
+  & :global(.MuiInputLabel-root.Mui-error)
+    color: $color_text_dark_gray !important
+
+  & :global(.MuiFormLabel-asterisk)
+    color: $color_text_error !important

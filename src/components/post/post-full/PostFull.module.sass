@@ -1,0 +1,53 @@
+@import src/styles/vars
+
+.post
+  &:global(.MuiCardContent-root:last-child)
+    padding: 0
+
+.title
+  margin-bottom: $space_tiny
+
+.tags
+  padding-top: 0
+
+.content
+  font-size: $font_normal
+
+.mainPostContent
+  display: flex
+  width: 100%
+  padding-top: 0
+  padding-bottom: 0
+
+.mainSharedPostContent
+  &:global(.MuiCardContent-root)
+    padding-bottom: 0
+
+.sharedPostContent
+  padding: 0 !important
+
+.sharedPostActions
+  margin-top: -$space_small
+
+.postContent
+  padding: 0
+  flex-grow: 1
+
+.postActions
+  margin: $space_mini 0 0
+
+.accountContent
+  padding-right: 0
+  padding-left: 0
+
+.imgContent
+  width: 100%
+  margin-top: $space_normal
+  margin-bottom: $space_normal
+  border-radius: 0.25rem
+
+.video
+  margin-bottom: $space_normal
+
+.cardActions
+  justify-content: space-evenly

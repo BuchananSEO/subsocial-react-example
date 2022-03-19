@@ -1,0 +1,72 @@
+@import src/styles/vars
+
+.bar
+  box-shadow: none
+  z-index: 1201
+
+  @include tablet
+    box-shadow: none
+
+.barWithMenu
+  box-shadow: none
+
+.header
+  display: flex
+  justify-content: space-between
+  width: 100%
+  grid-template-columns: 1fr minmax(0, 765px) 1fr
+  padding-left: 0
+
+  @include tablet
+    padding: 0
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 1fr 1fr
+
+.icon
+  height: min-content
+  margin-left: 0
+  color: $color_text_secondary
+
+
+.label
+  color: $color_text_secondary
+
+  a
+    white-space: nowrap
+
+  @include tablet
+    grid-area: 2 / 1 / 2 / 3
+    justify-self: center
+    max-width: 100%
+
+  & :global(.MuiButtonBase-root.MuiTab-root)
+    height: $header_height_on_desktop
+
+    @include tablet
+      height: $header_height_on_mobile
+
+  & button:first-child
+    margin-left: 1px
+
+  & button:last-child
+    margin-right: 1px
+
+.user
+  display: flex
+  align-items: center
+  justify-self: flex-end
+  column-gap: $space_normal
+  cursor: pointer
+
+  @include tablet
+    padding-right: 1.1875rem
+
+.menu
+  display: flex
+  gap: $space_small
+  align-items: center
+  padding-left: $space_small
+
+  @include tablet
+    gap: $space_normal
+    padding-left: $space_normal
